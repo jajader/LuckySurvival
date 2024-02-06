@@ -1,0 +1,4 @@
+name: LuckySurvival
+version: '${project.version}'
+main: org.jajader.LuckySurvival
+api-version: '1.20'

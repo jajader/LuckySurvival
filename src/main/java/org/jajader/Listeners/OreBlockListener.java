@@ -140,7 +140,6 @@ public class OreBlockListener implements Listener {
 
     @EventHandler
     public static void oreBreak(BlockBreakEvent e) {
-        e.getPlayer().sendMessage("1");
         if (!Arrays.asList(oreTable).contains(e.getBlock().getType())) return;
 
         ItemStack helding = e.getPlayer().getInventory().getItem(e.getPlayer().getInventory().getHeldItemSlot());
@@ -168,17 +167,14 @@ public class OreBlockListener implements Listener {
         if (Arrays.asList(visualResultTable).contains(e.getBlock().getType())) {
             RandomOreBox(e.getBlock(), visualResultTable, dupling);
             e.setDropItems(false);
-            e.getPlayer().sendMessage("2");
         }
         if (Arrays.asList(visualResultDeepslateTable).contains(e.getBlock().getType())) {
             RandomOreBox(e.getBlock(), visualResultDeepslateTable, dupling);
             e.setDropItems(false);
-            e.getPlayer().sendMessage("3");
         }
         if (Arrays.asList(visualResultNetherTable).contains(e.getBlock().getType())) {
             RandomOreBox(e.getBlock(), visualResultNetherTable, dupling);
             e.setDropItems(false);
-            e.getPlayer().sendMessage("4");
         }
     }
 
